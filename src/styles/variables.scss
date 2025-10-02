@@ -1,0 +1,47 @@
+// Color Palette - Wedding Theme
+$emerald-green: #50c878;
+$emerald-dark: #3a9b5c;
+$emerald-light: #7dd89f;
+$white: #ffffff;
+$off-white: #fafafa;
+$gold: #ffd700;
+$gold-dark: #b8860b;
+$gold-light: #ffed4e;
+$black: #000000;
+$charcoal: #2c2c2c;
+$gray-light: #f5f5f5;
+
+// Typography
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Poppins', sans-serif;
+$font-script: 'Dancing Script', cursive;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1200px;
+
+// Shadows
+$shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+$shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
+
+// Transitions
+$transition-fast: 0.2s ease-in-out;
+$transition-medium: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;

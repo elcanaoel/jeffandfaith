@@ -1,0 +1,344 @@
+@import '../../styles/variables.scss';
+
+.rsvp {
+  padding: $spacing-xxl 0;
+  background: linear-gradient(
+    135deg,
+    rgba($emerald-green, 0.05) 0%,
+    rgba($white, 1) 50%,
+    rgba($gold, 0.05) 100%
+  );
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba($emerald-green, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba($gold, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+  }
+  
+  &__icon {
+    font-size: 3rem;
+    color: $emerald-green;
+    margin-bottom: $spacing-md;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  &__title {
+    font-family: $font-primary;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $charcoal;
+    margin-bottom: $spacing-md;
+    
+    @media (max-width: $tablet) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1.2rem;
+    color: $charcoal;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    
+    @media (max-width: $mobile) {
+      font-size: 1rem;
+    }
+  }
+  
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xxl;
+    
+    @media (min-width: $desktop) {
+      grid-template-columns: 2fr 1fr;
+      gap: $spacing-xxl * 1.5;
+    }
+  }
+  
+  &__form-section {
+    background: $white;
+    border-radius: $border-radius-xl;
+    padding: $spacing-xl;
+    box-shadow: $shadow-medium;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, $emerald-green 0%, $gold 100%);
+    }
+  }
+  
+  &__contact {
+    background: $white;
+    border-radius: $border-radius-xl;
+    padding: $spacing-xl;
+    box-shadow: $shadow-medium;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, $gold 0%, $emerald-green 100%);
+    }
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+  
+  &__success {
+    text-align: center;
+    padding: $spacing-xl;
+    
+    .success-icon {
+      font-size: 4rem;
+      color: $emerald-green;
+      margin-bottom: $spacing-lg;
+      animation: bounce 1s ease-in-out;
+    }
+    
+    .success-title {
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 600;
+      color: $charcoal;
+      margin-bottom: $spacing-md;
+    }
+    
+    .success-message {
+      font-size: 1.1rem;
+      color: $charcoal;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-label {
+  font-family: $font-secondary;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $charcoal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: $spacing-md;
+  border: 2px solid rgba($emerald-green, 0.2);
+  border-radius: $border-radius-md;
+  font-family: $font-secondary;
+  font-size: 1rem;
+  color: $charcoal;
+  background: $white;
+  transition: all $transition-medium;
+  
+  &:focus {
+    outline: none;
+    border-color: $emerald-green;
+    box-shadow: 0 0 0 3px rgba($emerald-green, 0.1);
+  }
+  
+  &::placeholder {
+    color: rgba($charcoal, 0.5);
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  background: linear-gradient(135deg, $emerald-green 0%, $emerald-dark 100%);
+  color: $white;
+  border: none;
+  border-radius: $border-radius-lg;
+  padding: $spacing-md $spacing-xl;
+  font-family: $font-secondary;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+  
+  &:hover {
+    background: linear-gradient(135deg, $emerald-dark 0%, $emerald-green 100%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-medium;
+  }
+  
+  .submit-icon {
+    font-size: 1rem;
+  }
+}
+
+.contact {
+  &__title {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $spacing-sm;
+    text-align: center;
+    
+    @media (max-width: $mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1rem;
+    color: $charcoal;
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    line-height: 1.6;
+  }
+  
+  &__methods {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+  
+  &__method {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    background: rgba($emerald-green, 0.05);
+    text-decoration: none;
+    color: $charcoal;
+    transition: all $transition-medium;
+    
+    &:hover {
+      background: rgba($emerald-green, 0.1);
+      transform: translateX(5px);
+    }
+    
+    &.whatsapp {
+      background: rgba(#25d366, 0.05);
+      
+      &:hover {
+        background: rgba(#25d366, 0.1);
+      }
+      
+      .contact__icon {
+        color: #25d366;
+      }
+    }
+  }
+  
+  &__icon {
+    font-size: 1.5rem;
+    color: $emerald-green;
+    flex-shrink: 0;
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+  
+  &__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $charcoal;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  &__value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $charcoal;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

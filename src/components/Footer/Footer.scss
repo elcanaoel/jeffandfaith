@@ -1,0 +1,207 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  position: relative;
+  padding: $spacing-xxl 0 $spacing-xl;
+  overflow: hidden;
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba($charcoal, 0.9) 0%,
+      rgba($emerald-dark, 0.8) 50%,
+      rgba($gold-dark, 0.7) 100%
+    );
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 30% 20%, rgba($gold, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba($emerald-green, 0.2) 0%, transparent 50%);
+      animation: backgroundShimmer 15s ease-in-out infinite;
+    }
+  }
+  
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba($black, 0.1) 100%
+    );
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+  
+  &__couple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-md;
+  }
+  
+  &__icon {
+    font-size: 2.5rem;
+    color: $gold;
+    animation: rotate 10s linear infinite;
+  }
+  
+  &__names {
+    font-family: $font-script;
+    font-size: 3rem;
+    font-weight: 600;
+    color: $white;
+    text-shadow: 2px 2px 4px rgba($black, 0.3);
+    
+    @media (max-width: $tablet) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
+  }
+  
+  &__date {
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $gold-light;
+    letter-spacing: 2px;
+    
+    @media (max-width: $mobile) {
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+  }
+  
+  &__message {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  &__text {
+    font-family: $font-primary;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: $white;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: $spacing-lg;
+    
+    @media (max-width: $mobile) {
+      font-size: 1.1rem;
+    }
+  }
+  
+  &__hearts {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+  }
+  
+  .heart {
+    font-size: 1.5rem;
+    color: $gold;
+    
+    &.heart-1 {
+      animation: heartFloat 3s ease-in-out infinite;
+    }
+    
+    &.heart-2 {
+      animation: heartFloat 3s ease-in-out infinite 1s;
+    }
+    
+    &.heart-3 {
+      animation: heartFloat 3s ease-in-out infinite 2s;
+    }
+  }
+  
+  &__bottom {
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba($white, 0.2);
+  }
+  
+  &__copyright {
+    font-size: 0.9rem;
+    color: $white;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    
+    @media (max-width: $mobile) {
+      font-size: 0.8rem;
+    }
+  }
+  
+  &__heart {
+    color: $gold;
+    font-size: 0.8rem;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+}
+
+@keyframes backgroundShimmer {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heartFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

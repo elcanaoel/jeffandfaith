@@ -1,0 +1,313 @@
+@import '../../styles/variables.scss';
+
+.event-details {
+  padding: $spacing-xxl 0;
+  background: linear-gradient(
+    180deg,
+    $off-white 0%,
+    $white 50%,
+    $gray-light 100%
+  );
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba($emerald-green, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba($gold, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+    
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-xxl;
+    }
+    
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-xxl;
+    }
+  }
+}
+
+.event-card {
+  background: $white;
+  border-radius: $border-radius-xl;
+  padding: $spacing-xl;
+  box-shadow: $shadow-light;
+  transition: all $transition-medium;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, $emerald-green 0%, $gold 100%);
+  }
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-heavy;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    position: relative;
+  }
+  
+  &__icon {
+    font-size: 2.5rem;
+    color: $emerald-green;
+    margin-bottom: $spacing-md;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+  
+  &__title {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $spacing-sm;
+    
+    @media (max-width: $mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+  
+  &__detail {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    background: rgba($emerald-green, 0.05);
+    transition: all $transition-medium;
+    
+    &:hover {
+      background: rgba($emerald-green, 0.1);
+      transform: translateX(5px);
+    }
+    
+    &.reception {
+      background: rgba($gold, 0.05);
+      
+      &:hover {
+        background: rgba($gold, 0.1);
+      }
+    }
+  }
+  
+  // Traditional Wedding specific styles
+  &.traditional {
+    &::before {
+      background: linear-gradient(90deg, $emerald-green 0%, $emerald-dark 100%);
+    }
+    
+    .event-card__icon {
+      color: $emerald-green;
+    }
+    
+    .detail__icon {
+      color: $emerald-green;
+    }
+  }
+  
+  // White Wedding specific styles
+  &.white-wedding {
+    &::before {
+      background: linear-gradient(90deg, $gold 0%, $gold-dark 100%);
+    }
+    
+    .event-card__icon {
+      color: $gold;
+    }
+    
+    .detail__icon {
+      color: $gold;
+    }
+  }
+}
+
+.detail {
+  &__icon {
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__label {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $spacing-xs;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  &__value {
+    font-size: 1rem;
+    color: $charcoal;
+    line-height: 1.5;
+    
+    .day-name {
+      display: block;
+      font-family: $font-primary;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $emerald-green;
+      margin-bottom: $spacing-xs;
+    }
+    
+    .day-number {
+      display: block;
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 700;
+      color: $gold;
+      margin-bottom: $spacing-xs;
+    }
+    
+    .month-year {
+      display: block;
+      font-size: 1rem;
+      color: $charcoal;
+    }
+  }
+}
+
+.color-theme {
+  grid-column: 1 / -1;
+  background: $white;
+  border-radius: $border-radius-xl;
+  padding: $spacing-xl;
+  box-shadow: $shadow-light;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, $emerald-green 0%, $white 25%, $gold 50%, $black 100%);
+  }
+  
+  &__title {
+    font-family: $font-primary;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $spacing-xl;
+    
+    @media (max-width: $mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: $spacing-lg;
+    
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-md;
+    }
+  }
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: all $transition-medium;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  &__color {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: $shadow-medium;
+    transition: all $transition-medium;
+    
+    @media (max-width: $mobile) {
+      width: 60px;
+      height: 60px;
+    }
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: $shadow-heavy;
+    }
+  }
+  
+  &__name {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $charcoal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  &.emerald .color-swatch__color {
+    background: $emerald-green;
+  }
+  
+  &.white .color-swatch__color {
+    background: $white;
+    border: 2px solid $gray-light;
+  }
+  
+  &.gold .color-swatch__color {
+    background: $gold;
+  }
+  
+  &.black .color-swatch__color {
+    background: $black;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
