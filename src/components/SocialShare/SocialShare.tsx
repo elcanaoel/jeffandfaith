@@ -66,8 +66,7 @@ const SocialShare: React.FC = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.4,
-        ease: "easeOut"
+        duration: 0.4
       }
     }
   };
