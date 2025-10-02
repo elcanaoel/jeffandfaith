@@ -1,8 +1,14 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header/Header';
+import CountdownTimer from './components/CountdownTimer/CountdownTimer';
+import OurStory from './components/OurStory/OurStory';
+import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import EventDetails from './components/EventDetails/EventDetails';
+import GiftRegistry from './components/GiftRegistry/GiftRegistry';
+import GuestBook from './components/GuestBook/GuestBook';
 import RSVP from './components/RSVP/RSVP';
+import SocialShare from './components/SocialShare/SocialShare';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './styles/global.scss';
@@ -34,8 +40,14 @@ function App() {
         transition={{ duration: 0.5 }}
       >
         <Header />
+        <CountdownTimer />
+        <OurStory />
+        <PhotoGallery />
         <EventDetails />
+        <GiftRegistry />
+        <GuestBook />
         <RSVP />
+        <SocialShare />
         <Footer />
         <ScrollToTop />
       </motion.div>

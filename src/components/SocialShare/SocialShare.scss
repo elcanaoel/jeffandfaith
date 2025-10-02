@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+
+.social-share {
+  padding: $spacing-xl 0;
+  background: linear-gradient(
+    135deg,
+    rgba($emerald-green, 0.05) 0%,
+    rgba($white, 1) 100%
+  );
+  
+  &__content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  &__title {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: $spacing-sm;
+    
+    @media (max-width: $mobile) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1rem;
+    color: $charcoal;
+    opacity: 0.8;
+    margin-bottom: $spacing-xl;
+    line-height: 1.6;
+  }
+  
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-md;
+    
+    @media (max-width: $mobile) {
+      gap: $spacing-sm;
+    }
+  }
+  
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: $spacing-md;
+    background: $white;
+    border: 2px solid rgba(var(--button-color, #{red($emerald-green)}, #{green($emerald-green)}, #{blue($emerald-green)}), 0.2);
+    border-radius: $border-radius-lg;
+    cursor: pointer;
+    transition: all $transition-medium;
+    min-width: 80px;
+    box-shadow: $shadow-light;
+    
+    &:hover {
+      background: rgba(var(--button-color, #{red($emerald-green)}, #{green($emerald-green)}, #{blue($emerald-green)}), 0.1);
+      border-color: rgba(var(--button-color, #{red($emerald-green)}, #{green($emerald-green)}, #{blue($emerald-green)}), 0.4);
+      box-shadow: $shadow-medium;
+    }
+    
+    &.copy-link {
+      --button-color: #{red($gold)}, #{green($gold)}, #{blue($gold)};
+    }
+    
+    @media (max-width: $mobile) {
+      min-width: 70px;
+      padding: $spacing-sm;
+    }
+  }
+  
+  &__icon {
+    font-size: 1.5rem;
+    
+    @media (max-width: $mobile) {
+      font-size: 1.3rem;
+    }
+  }
+  
+  &__name {
+    font-family: $font-secondary;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $charcoal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    @media (max-width: $mobile) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// Custom colors for each social platform
+.social-share__button:nth-child(1) {
+  --button-color: 24, 119, 242; // Facebook blue
+}
+
+.social-share__button:nth-child(2) {
+  --button-color: 29, 161, 242; // Twitter blue
+}
+
+.social-share__button:nth-child(3) {
+  --button-color: 37, 211, 102; // WhatsApp green
+}
+
+.social-share__button:nth-child(4) {
+  --button-color: 234, 67, 53; // Gmail red
+}
