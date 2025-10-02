@@ -5,8 +5,6 @@ import CountdownTimer from './components/CountdownTimer/CountdownTimer';
 import OurStory from './components/OurStory/OurStory';
 import PhotoGallery from './components/PhotoGallery/PhotoGallery';
 import EventDetails from './components/EventDetails/EventDetails';
-import GiftRegistry from './components/GiftRegistry/GiftRegistry';
-import GuestBook from './components/GuestBook/GuestBook';
 import RSVP from './components/RSVP/RSVP';
 import SocialShare from './components/SocialShare/SocialShare';
 import Footer from './components/Footer/Footer';
@@ -52,12 +50,6 @@ function App() {
         </LazySection>
         <LazySection>
           <EventDetails />
-        </LazySection>
-        <LazySection>
-          <GiftRegistry />
-        </LazySection>
-        <LazySection>
-          <GuestBook />
         </LazySection>
         <LazySection>
           <RSVP />
