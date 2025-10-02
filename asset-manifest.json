@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jeffandfaith/static/css/main.7b05e658.css",
+    "main.js": "/jeffandfaith/static/js/main.7cc189de.js",
+    "static/js/453.43349c54.chunk.js": "/jeffandfaith/static/js/453.43349c54.chunk.js",
+    "index.html": "/jeffandfaith/index.html",
+    "main.7b05e658.css.map": "/jeffandfaith/static/css/main.7b05e658.css.map",
+    "main.7cc189de.js.map": "/jeffandfaith/static/js/main.7cc189de.js.map",
+    "453.43349c54.chunk.js.map": "/jeffandfaith/static/js/453.43349c54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b05e658.css",
+    "static/js/main.7cc189de.js"
+  ]
+}
