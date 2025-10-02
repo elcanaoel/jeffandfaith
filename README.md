@@ -1,46 +1,118 @@
-# Getting Started with Create React App
+# 💍 Jeff & Faith Wedding Invitation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful, modern wedding invitation website built with React, TypeScript, and Sass.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+- **Elegant Design**: Beautiful gradient backgrounds with emerald green, white, gold, and black color scheme
+- **Responsive Layout**: Optimized for all devices (desktop, tablet, mobile)
+- **Smooth Animations**: Professional animations using Framer Motion
+- **Interactive RSVP**: Form with validation and contact integration
+- **Modern Typography**: Elegant font combinations (Playfair Display, Poppins, Dancing Script)
+- **Contact Integration**: Direct phone and WhatsApp links
+- **Accessibility**: Reduced motion support and semantic HTML
 
-### `npm start`
+## 🎨 Design Elements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Color Palette
+- **Emerald Green** (#50c878) - Primary color
+- **White** (#ffffff) - Clean backgrounds
+- **Gold** (#ffd700) - Accent color
+- **Black** (#000000) - Text and contrast
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Typography
+- **Playfair Display** - Elegant serif for headings
+- **Poppins** - Modern sans-serif for body text
+- **Dancing Script** - Beautiful script for decorative elements
 
-### `npm test`
+## 📅 Wedding Details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Traditional Wedding
+- **Date**: Friday, December 19th, 2025
+- **Time**: 2:00 PM
+- **Venue**: Late Inspector Isah Hussaini Edigbo compound's, Ojofu Anyigba
 
-### `npm run build`
+### White Wedding
+- **Date**: Saturday, December 20th, 2025
+- **Venue**: St Joseph Catholic church Anyigba, Dekina local Government, Kogi state
+- **Reception**: Immediately after service at the same premises
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/jeff-faith-wedding.git
+cd jeff-faith-wedding
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+```bash
+npm run dev
+# or
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🛠️ Available Scripts
 
-## Learn More
+- `npm start` - Runs the app in development mode
+- `npm run dev` - Alternative command to start development server
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🏗️ Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React 18** - JavaScript library for building user interfaces
+- **TypeScript** - Typed superset of JavaScript
+- **Sass/SCSS** - CSS preprocessor for advanced styling
+- **Framer Motion** - Production-ready motion library for React
+- **React Icons** - Popular icon library (replaced with Unicode emojis for compatibility)
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+- **Desktop** (1200px+)
+- **Tablet** (768px - 1199px)
+- **Mobile** (320px - 767px)
+
+## 🎭 Animations
+
+- Smooth scroll animations
+- Page load transitions
+- Interactive hover effects
+- Form submission feedback
+- Floating elements
+
+## 📞 Contact Information
+
+- **Phone**: 09124766326, 08100226008
+- **WhatsApp**: Available through the website links
+
+## 🤝 Contributing
+
+This is a personal wedding invitation website. If you'd like to use this as a template for your own wedding, feel free to fork and customize!
+
+## 📄 License
+
+This project is created for Jeff & Faith's wedding. Feel free to use as inspiration for your own projects.
+
+## 💕 Special Thanks
+
+Created with love for Jeff Ojonugwa Friday & Faith Ugbede Isah's special day!
+
+---
+
+*"Two souls with but a single thought, two hearts that beat as one."*
