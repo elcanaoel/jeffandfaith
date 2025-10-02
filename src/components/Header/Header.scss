@@ -138,6 +138,27 @@
     margin: $spacing-md 0;
     color: $gold-light;
     letter-spacing: 2px;
+    transform-origin: left;
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, $emerald-green 0%, $gold 100%);
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: lineGlow 3s ease-in-out infinite;
+    }
+    
+    @media (max-width: $mobile) {
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
   }
   
   &__invitation-to {
@@ -254,5 +275,16 @@
   }
   66% {
     transform: translateY(10px) rotate(-1deg);
+  }
+}
+
+@keyframes lineGlow {
+  0%, 100% {
+    transform: scaleX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
   }
 }

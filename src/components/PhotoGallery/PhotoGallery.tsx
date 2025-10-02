@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import LazyImage from '../LazyImage/LazyImage';
 import './PhotoGallery.scss';
 
 interface Photo {
@@ -119,7 +120,7 @@ const PhotoGallery: React.FC = () => {
                 onClick={() => setSelectedPhoto(photo)}
               >
                 <div className="photo-gallery__image-wrapper">
-                  <img
+                  <LazyImage
                     src={photo.src}
                     alt={photo.alt}
                     className="photo-gallery__image"

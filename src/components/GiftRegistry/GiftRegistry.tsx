@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import LazyImage from '../LazyImage/LazyImage';
 import './GiftRegistry.scss';
 
 interface GiftItem {
@@ -138,7 +139,7 @@ const GiftRegistry: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="gift-registry__image-wrapper">
-                  <img
+                  <LazyImage
                     src={item.image}
                     alt={item.name}
                     className="gift-registry__image"

@@ -1,0 +1,110 @@
+@import '../../styles/variables.scss';
+
+.text-animation {
+  display: inline-block;
+  
+  &__cursor {
+    color: $emerald-green;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+}
+
+.word-reveal {
+  display: inline-block;
+  
+  &__word {
+    display: inline-block;
+    margin-right: 0.25em;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.char-reveal {
+  display: inline-block;
+  
+  &__char {
+    display: inline-block;
+  }
+}
+
+// Utility classes for different animation styles
+.text-glow {
+  text-shadow: 
+    0 0 5px rgba($emerald-green, 0.5),
+    0 0 10px rgba($emerald-green, 0.3),
+    0 0 15px rgba($emerald-green, 0.2);
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    $charcoal 0%,
+    $emerald-green 50%,
+    $charcoal 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.text-bounce {
+  animation: bounce 1s ease-in-out;
+}
+
+.text-fade-up {
+  animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 
+      0 0 5px rgba($emerald-green, 0.5),
+      0 0 10px rgba($emerald-green, 0.3),
+      0 0 15px rgba($emerald-green, 0.2);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px rgba($emerald-green, 0.8),
+      0 0 20px rgba($emerald-green, 0.6),
+      0 0 30px rgba($emerald-green, 0.4);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

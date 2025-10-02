@@ -11,6 +11,7 @@ import RSVP from './components/RSVP/RSVP';
 import SocialShare from './components/SocialShare/SocialShare';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import LazySection from './components/LazySection/LazySection';
 import './styles/global.scss';
 import './App.scss';
 
@@ -40,14 +41,30 @@ function App() {
         transition={{ duration: 0.5 }}
       >
         <Header />
-        <CountdownTimer />
-        <OurStory />
-        <PhotoGallery />
-        <EventDetails />
-        <GiftRegistry />
-        <GuestBook />
-        <RSVP />
-        <SocialShare />
+        <LazySection>
+          <CountdownTimer />
+        </LazySection>
+        <LazySection>
+          <OurStory />
+        </LazySection>
+        <LazySection>
+          <PhotoGallery />
+        </LazySection>
+        <LazySection>
+          <EventDetails />
+        </LazySection>
+        <LazySection>
+          <GiftRegistry />
+        </LazySection>
+        <LazySection>
+          <GuestBook />
+        </LazySection>
+        <LazySection>
+          <RSVP />
+        </LazySection>
+        <LazySection>
+          <SocialShare />
+        </LazySection>
         <Footer />
         <ScrollToTop />
       </motion.div>
