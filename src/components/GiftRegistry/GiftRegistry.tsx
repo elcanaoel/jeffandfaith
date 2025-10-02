@@ -99,14 +99,14 @@ const GiftRegistry: React.FC = () => {
   };
 
   return (
-    <section className="gift-registry">
+    <section className="gift-registry" id="gift-registry">
       <div className="container">
         <motion.div
           className="gift-registry__content"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <motion.div className="gift-registry__header" variants={itemVariants}>
             <h2 className="gift-registry__title">Gift Registry</h2>
